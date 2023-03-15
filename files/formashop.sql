@@ -109,3 +109,14 @@ CREATE TABLE T_Order_Items (
 	IdOrder             INT(4)   NOT NULL,
 	FOREIGN KEY(IdOrder) REFERENCES T_Orders(IdOrder)
 ) ENGINE = InnoDB;
+
+CREATE TABLE T_UserRole (
+	IdUserRole				int(4)		PRIMARY KEY AUTO_INCREMENT,
+	Login				varchar(20)	NOT NULL UNIQUE,
+	Role				varchar(20)	NOT NULL
+) ENGINE = InnoDB;
+
+CREATE TABLE T_Role (
+	IdRole				int(4)		PRIMARY KEY AUTO_INCREMENT,
+	Role				varchar(20)	NOT NULL
+) ENGINE = InnoDB;
